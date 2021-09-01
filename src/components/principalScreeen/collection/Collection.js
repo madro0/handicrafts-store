@@ -34,7 +34,6 @@ export const Collection = () => {
                             </div>
                         )
                     })}
-                    
                 </div>
             </section>
         </div>
