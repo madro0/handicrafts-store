@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { ShoppingCart } from '../../shoppingScreen/ShoppingCart';
 import { DataMenu } from './DataMenu';
 
 
@@ -40,22 +41,24 @@ export const Header = () => {
         
     }
     
+    // ======SHOW CARSHOP======
+    const showShop=()=>{
+        const shop = document.getElementById('shop');
+        shop.classList.toggle('show__shop');
+    }
 
     return ( 
         <div>
             <header className="l-header">
                 <nav className="nav bd-grid">
-                    <div>
+                    <div className="nav__menu__icon">
+                        <i className='bx bx-menu nav__toggle' id="nav-toggle" onClick={showMenu} ></i>                       
                         <a href="/" className="nav__logo">SARA</a>
                     </div>
 
                     <div className="nav__menu" id="nav-menu">
                         <ul className="nav__list">
-                            {/* <li className="nav__item"><a href="#home" className="nav__link active">Home</a></li>
-                            <li className="nav__item"><a href="#feature" className="nav__link" onClick={linkAction}>Featured</a></li>
-                            <li className="nav__item"><a href="#new" className="nav__link">New</a></li>
-                            <li className="nav__item"><a href="#suscribed" className="nav__link">Suscribed</a></li> */
-                            
+                            {
                                 DataMenu.map((item, index)=>{
                                     return (
                                         <li key={index} className="nav__item" onClick={()=>activatedInputChange(item.title)}> 
@@ -68,9 +71,9 @@ export const Header = () => {
                     </div>
 
                     <div>
-                        <i className='bx bx-cart nav__cart' ></i>
-                        <i className='bx bx-menu nav__toggle' id="nav-toggle" onClick={showMenu} ></i>
+                        <i className='bx bx-cart nav__cart' onClick={showShop}></i>
                     </div>
+                    <ShoppingCart/>
                 </nav>
             </header>
         </div>

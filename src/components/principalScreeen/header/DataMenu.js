@@ -6,8 +6,8 @@ export const DataMenu = [
         className:'nav__link active'
     },
     {
-        title: 'Feature',
-        path: '#feature',
+        title: 'Featured',
+        path: '#featured',
         icon: '',
         className:'nav__link'
     },

@@ -3,7 +3,7 @@ import { productsData } from './productsData';
 export const Featured = () => {
     return (
         <div>
-            <section className="featured section" id= "feactured">
+            <section className="featured section" id= "featured">
                 <h2 className="section-title">FEACTURED PRODUCTS</h2>
                 <a href="#home" className="section-all">View All</a>
                 <div className="featured__container bd-grid">

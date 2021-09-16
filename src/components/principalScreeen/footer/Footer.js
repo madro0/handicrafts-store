@@ -67,6 +67,7 @@ export const Footer = () => {
                             <li><a href="#home" className="footer__link">Gift Cards</a></li>
                         </ul>
                     </div>
+                    
                     <div className="footer__box">
                         <h3 className="footer__title">FOLLOW</h3>
                         <a href="#home" className="footer__social"><i className='bx bxl-facebook-square' ></i></a>

@@ -4,6 +4,8 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+import { ArticleScreen } from '../components/article/ArticleScreen';
+import { Header } from '../components/principalScreeen/header/Header';
 import { PrincipalScreen } from '../components/principalScreeen/PrincipalScreen';
 import { ShoppingCart } from '../components/shoppingScreen/ShoppingCart';
 
@@ -11,9 +13,10 @@ export const AppRouter = () => {
     return (
         <Router>
             <div>
-                <PrincipalScreen/>
+                <Header/>
                 <Switch>
-                    <Route exact path="/cart" component={ShoppingCart}/>
+                    <Route exact path="/" component={PrincipalScreen}/>
+                    <Route exact path="/article" component={ArticleScreen}/>
                 </Switch>
             </div>
         </Router>

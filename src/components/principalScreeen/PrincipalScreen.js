@@ -12,7 +12,6 @@ import { NewSlattler } from './newsletter/NewSlattler';
 export const PrincipalScreen = () => {
     return (
         <div>
-            <Header/>
             <Home/>
             <Collection/>
             <Featured/>
